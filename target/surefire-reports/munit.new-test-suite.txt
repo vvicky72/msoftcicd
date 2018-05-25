@@ -1,5 +1,18 @@
-SUCCESS - Test new-test-suite-cicdsampleFlowTest finished Successfully.
+FAILURE - Test new-test-suite-cicdsampleFlowTest finished with a Failure.
+java.lang.AssertionError: expected:<abc> but was:<abcd>
+	at new-test-suite-cicdsampleFlowTest.munit:assert-on-equals{doc:name=Assert Equals, actualValue=abcd, expectedValue=abc}(new-test-suite.xml:15)
+	at new-test-suite-cicdsampleFlowTest.mule:logger{doc:name=Logger, level=INFO, message=Vikas ************************************************************************************** abc}(new-test-suite.xml:14)
+	at new-test-suite-cicdsampleFlowTest.json:json-to-object-transformer{doc:name=JSON to Object, returnClass=java.util.ArrayList}(new-test-suite.xml:13)
+	at cicdsampleFlow.mule:set-payload{doc:name=Set Payload, value=[{"field1":"abc"},{"field1":"efg"},{"field1":null},{"field1":null},{"field1":null},{"field1":"55 Main St"},{"field1":"CA"},{"field1":"FL"}]}(cicdsample.xml:22)
+	at cicdsampleFlow.json:object-to-json-transformer{doc:name=Object to JSON}(cicdsample.xml:21)
+	at cicdsampleFlow.db:select{doc:name=Database, transactionalAction=JOIN_IF_POSSIBLE, streaming=false, config-ref=org.mule.module.db.internal.resolver.database.StaticDbConfigResolver@2b03d52f, target=}(cicdsample.xml:18)
+	at cicdsampleFlow.mule:logger{doc:name=Logger, level=INFO, message=Came here}(cicdsample.xml:17)
+	at new-test-suite-cicdsampleFlowTest.mule:flow{initialState=started, id=Flow$$EnhancerByMUNIT$$bb7e3368{cicdsampleFlow}}(cicdsample.xml:15)
+	at new-test-suite-cicdsampleFlowTest.mule:flow-ref{doc:name=Flow-ref to cicdsampleFlow}(new-test-suite.xml:12)
+	at new-test-suite-cicdsampleFlowTest.munit:test{initialState=started, description=Test, ignore=false, abstract=false, id=MunitTestFlow$$EnhancerByMUNIT$$904837f0{new-test-suite-cicdsampleFlowTest}}(new-test-suite.xml:11)
 
+
+null
 =============================================================================
-Tests run: 1 - Failures: 0 - Errors: 0 - Skipped: 0 - Time elapsed: 1.116 sec
+Tests run: 1 - Failures: 1 - Errors: 0 - Skipped: 0 - Time elapsed: 0.965 sec
 =============================================================================
