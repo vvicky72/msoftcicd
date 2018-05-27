@@ -1,4 +1,4 @@
-<testsuite name="new-test-suite" time="0.965" failures="1" errors="0" skipped="0" tests="1">
+<testsuite name="new-test-suite" time="0.465" failures="0" errors="0" skipped="0" tests="1">
   <properties>
     <property key="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property key="sun.boot.library.path" value="D:\programs\Java8\jre\bin"/>
@@ -42,7 +42,7 @@
     <property key="java.class.path" value="D:\programs\apache-maven-3.5.3\bin\..\boot\plexus-classworlds-2.5.2.jar"/>
     <property key="user.name" value="vvick"/>
     <property key="java.vm.specification.version" value="1.8"/>
-    <property key="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean package"/>
+    <property key="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher package mule:deploy"/>
     <property key="java.home" value="D:\programs\Java8\jre"/>
     <property key="sun.arch.data.model" value="64"/>
     <property key="user.language" value="en"/>
@@ -65,7 +65,5 @@
     <property key="mule.testingMode" value="true"/>
     <property key="mule.working.dir" value="D:\Mulesoft\workspace\cicdsample\target\.mule"/>
   </properties>
-  <testcase time="0.594" name="new-test-suite-cicdsampleFlowTest" classname="new-test-suite">
-    <failure><![CDATA[java.lang.AssertionError: expected:<abc> but was:<abcd>&#10;&#9;at new-test-suite-cicdsampleFlowTest.munit:assert-on-equals{doc:name=Assert Equals, actualValue=abcd, expectedValue=abc}(new-test-suite.xml:15)&#10;&#9;at new-test-suite-cicdsampleFlowTest.mule:logger{doc:name=Logger, level=INFO, message=Vikas ************************************************************************************** abc}(new-test-suite.xml:14)&#10;&#9;at new-test-suite-cicdsampleFlowTest.json:json-to-object-transformer{doc:name=JSON to Object, returnClass=java.util.ArrayList}(new-test-suite.xml:13)&#10;&#9;at cicdsampleFlow.mule:set-payload{doc:name=Set Payload, value=[{"field1":"abc"},{"field1":"efg"},{"field1":null},{"field1":null},{"field1":null},{"field1":"55 Main St"},{"field1":"CA"},{"field1":"FL"}]}(cicdsample.xml:22)&#10;&#9;at cicdsampleFlow.json:object-to-json-transformer{doc:name=Object to JSON}(cicdsample.xml:21)&#10;&#9;at cicdsampleFlow.db:select{doc:name=Database, transactionalAction=JOIN_IF_POSSIBLE, streaming=false, config-ref=org.mule.module.db.internal.resolver.database.StaticDbConfigResolver@2b03d52f, target=}(cicdsample.xml:18)&#10;&#9;at cicdsampleFlow.mule:logger{doc:name=Logger, level=INFO, message=Came here}(cicdsample.xml:17)&#10;&#9;at new-test-suite-cicdsampleFlowTest.mule:flow{initialState=started, id=Flow$$EnhancerByMUNIT$$bb7e3368{cicdsampleFlow}}(cicdsample.xml:15)&#10;&#9;at new-test-suite-cicdsampleFlowTest.mule:flow-ref{doc:name=Flow-ref to cicdsampleFlow}(new-test-suite.xml:12)&#10;&#9;at new-test-suite-cicdsampleFlowTest.munit:test{initialState=started, description=Test, ignore=false, abstract=false, id=MunitTestFlow$$EnhancerByMUNIT$$904837f0{new-test-suite-cicdsampleFlowTest}}(new-test-suite.xml:11)&#10;]]></failure>
-  </testcase>
+  <testcase time="0.128" name="new-test-suite-cicdsampleFlowTest" classname="new-test-suite"/>
 </testsuite>

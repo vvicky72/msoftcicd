@@ -12,6 +12,6 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
         <flow-ref name="cicdsampleFlow" doc:name="Flow-ref to cicdsampleFlow"/>
         <json:json-to-object-transformer returnClass="java.util.ArrayList" doc:name="JSON to Object"/>
         <logger message="Vikas ************************************************************************************** #[payload[0].get(&quot;field1&quot;)]" level="INFO" doc:name="Logger"/>
-        <munit:assert-on-equals expectedValue="#[payload[0].get(&quot;field1&quot;)]" actualValue="#['abcd']" doc:name="Assert Equals"/>
+        <munit:assert-on-equals expectedValue="#[payload[0].get(&quot;field1&quot;)]" actualValue="#['abc']" doc:name="Assert Equals"/>
     </munit:test>
 </mule>

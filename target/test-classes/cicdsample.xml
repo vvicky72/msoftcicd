@@ -15,10 +15,13 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     <flow name="cicdsampleFlow">
          <http:listener config-ref="HTTP_Listener_Configuration" path="/mywebsvc" allowedMethods="get" doc:name="HTTP"/>
         <logger message="Came here" level="INFO" doc:name="Logger"/>
-        <db:select config-ref="MySQL_Configuration" doc:name="Database">
-            <db:parameterized-query><![CDATA[select field1 from vikas]]></db:parameterized-query>
-        </db:select>
-        <json:object-to-json-transformer doc:name="Object to JSON"/>
-        <set-payload value="#[payload]" doc:name="Set Payload"/>
+        <set-payload value="[
+    {
+        &quot;field1&quot;: &quot;abc&quot;
+    },
+    {
+        &quot;field1&quot;: &quot;efg&quot;
+    }
+]" doc:name="Set Payload" mimeType="application/json"/>
     </flow>
 </mule>
