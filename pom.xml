@@ -76,7 +76,7 @@
 					<!-- muleVersion is the runtime version as it appears on the CloudHub 
 						interface -->
 					<muleVersion>3.8.5</muleVersion>
-					<username>vvicky725</username>
+					<username>vvicky727</username>
 					<password>Socce123</password>
 					<redeploy>true</redeploy>
 					<environment>Sandbox</environment>
